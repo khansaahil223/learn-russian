@@ -17,11 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+Route::middleware([])->get('/home', function () {
     return view('dashboard');
 })->name('home');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/read', function () {
+Route::middleware([])->get('/read', function () {
     return view('pages.read');
 })->name('read');
 
